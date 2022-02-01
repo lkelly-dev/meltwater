@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/meltwater/static/css/main.4add9472.css",
+    "main.js": "/meltwater/static/js/main.c8ac89e0.js",
+    "index.html": "/meltwater/index.html",
+    "main.4add9472.css.map": "/meltwater/static/css/main.4add9472.css.map",
+    "main.c8ac89e0.js.map": "/meltwater/static/js/main.c8ac89e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4add9472.css",
+    "static/js/main.c8ac89e0.js"
+  ]
+}
