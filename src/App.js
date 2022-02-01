@@ -39,7 +39,13 @@ const App = () => {
       <div className="App-container">
         <Title>Meltwater</Title>
         <SubTitle>Document classifier</SubTitle>
-        <section>
+
+        <Container>
+          <Instructions>
+            <h4>Instructions</h4>
+            <p>Step 1: Enter keywords and phrases to be censored from text</p>
+            <p>Step 2: Enter text to censor</p>
+          </Instructions>
           <InputSection>
             <label>Keywords and Phrases: </label>
             <input value={keywords} onChange={(e) => setKeywords(e.target.value)} />
@@ -55,16 +61,33 @@ const App = () => {
             <label>Text to Censor:</label>
             <textarea value={docText} onChange={(e) => setDocText(e.target.value)} />
           </InputSection>
-          <div style={{ maxWidth: '500px' }}>
-            <p>Output: {censoredText}</p>
-          </div>
-        </section>
+          <Output>
+            <h4>Output:</h4>
+            <p>{censoredText}</p>
+          </Output>
+        </Container>
       </div>
     </div>
   );
 };
 
 export default App;
+
+const Container = styled.section`
+  max-width: 600px;
+
+  input,
+  textarea {
+    border-radius: 2px;
+    padding: 3px 5px;
+  }
+`;
+
+const Instructions = styled.section`
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 2rem;
+`;
 
 const Title = styled.h1`
   margin: 10px 0px;
@@ -89,4 +112,13 @@ const KeywordList = styled.ul`
   flex-direction: column;
   align-items: flex-start;
   font-size: 16px;
+`;
+
+const Output = styled.div`
+  h4 {
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 16px;
+  }
 `;
